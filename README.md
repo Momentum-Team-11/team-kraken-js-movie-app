@@ -8,7 +8,7 @@ A user should be able to enter a new movie, see a list of all their movies, and 
 
 Movies have a title, a boolean indicating whether it has been watched or not, a human-readable date created, and, if marked as watched, a human-readable date that it was marked as watched. These dates should not be user-editable but set programmatically when a movie is saved or edited.
 
-CSS is not important in this project, but you can add minimal styling as needed. Basic styling is being provided with [PicnicCSS](https://picnicss.com/), and a `style.css` is included in the repo.
+CSS is not important in this project, but you can add minimal styling as needed. Basic styling is being provided with [Water.css](https://watercss.kognise.dev/), and a `style.css` is included in the repo.
 
 **You won't be able to do all of this** so make some decisions about where to start and what to do later.
 
@@ -16,10 +16,10 @@ CSS is not important in this project, but you can add minimal styling as needed.
 
 - Clone the repo and run `npm install`.
 - Copy the `sample-db.json` to `db.json`.
-- Run `npm start` to run live-server and json-server together (just like you did for the notes app).
+- Run `npm start` to run live-server and json-server together.
 - Create a form to allow a user to add a new movie. New movies are by default marked as not watched when they are added.
 - Show a list of existing movies with watched or not watched indicated somehow. Watched movies should show the date they were watched.
-- Allow a user to mark a movie as having been watched.
+- Allow a user to mark a movie as having been watched. This could be a link, a button, a font icon, or a checkbox. Watched movies could have text that says "watched on Feb 2, 2022" or could have an icon or different color -- you decide how to indicate this.
 - BONUS FEATURE: display the movie list sorted in alphabetical order.
 
 ## Mob programming rules
@@ -42,17 +42,39 @@ Some things to keep in mind:
 
 ### The roles
 
-**The Driver** This person shares their screen and does the typing. In this role, you are mainly a conduit for the ideas of the group, implementing what the Navigator asks you to. You are not generating code yourself.
+🚘 **The Driver**
 
-**The Navigator** The navigator leads the way, making decisions based on the input of the group about what to do and giving direction about what to type to the driver. They may ask the scout and individual contributors for help as needed.
+This person shares their screen and does the typing. In this role, you are mainly a conduit for the ideas of the group, implementing what the Navigator asks you to. You are not generating code yourself.
 
-**The Moderator** The job of the moderator is to keep everyone focused and on track and be sure all voices are heard. This person leads the discussion, asks pertinent questions to generate ideas, and keeps things moving forward in cooperation with the Navigator.
+---
 
-**The Scout** This person is responsible for looking up syntax or documentation and may be asked to do that by anyone on the team. They may also make suggestions for things to try if they come across relevant examples in the documentation.
+🗺️ **The Navigator**
 
-**The Individual Contributors** These developers make suggestions and offer helpful advice as needed. The traffic controller may ask them directly for their input and moderate their contributions to the discussion.
+The navigator leads the way, making decisions based on the input of the group about what to do and giving direction about what to type to the driver. They may ask the scout and individual contributors for help as needed.
 
-### Role assignments
+---
+
+⚖️ **The Moderator**
+
+The job of the moderator is to keep everyone focused and on track and be sure all voices are heard. This person leads the discussion, asks pertinent questions to generate ideas, and keeps things moving forward in cooperation with the Navigator.
+
+The moderator also keeps time so that roles can shift on schedule. ⏲️
+
+---
+
+🔭 **The Scout**
+
+This person is responsible for looking up syntax or documentation and may be asked to do that by anyone on the team. They may also make suggestions for things to try if they come across relevant examples in the documentation.
+
+---
+
+
+👩🏽‍💻 👨🏻‍💻 👨🏿‍💻 👩🏼‍💻 **The Individual Contributors**
+
+These developers make suggestions and offer helpful advice as needed. The traffic controller may ask them directly for their input and moderate their contributions to the discussion.
+
+---
+### Switch roles in shifts
 
 We'll shift roles at 10-minute intervals. Each person will have a chance to occupy every role. When we reach the last shift, we will start over and repeat the cycle.
 
