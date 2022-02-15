@@ -11,3 +11,18 @@ fetch(url)
 .then((data) => {
     console.log(data)
 })
+const movieSearch = document.getElementById('movie-search')
+movieSearch.addEventListener('submit', function(event){
+    event.preventDefault()
+    console.log("click!", movieSearch)
+    const search = document.querySelector('#search').value
+    fetch(url, {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"}, 
+        body: JSON.stringify({
+            title: search, 
+            //watched: boolean
+            //created_at: later add moment
+        })
+    })
+})
