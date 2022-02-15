@@ -26,3 +26,7 @@ movieSearch.addEventListener('submit', function(event){
         })
     })
 })
+// start display movie list
+// add a checkBox to each movie
+//create a list element for movies
+//create some functions (boolean, moment.js, fetch request for patch to be able to update)
