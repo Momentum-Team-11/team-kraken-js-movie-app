@@ -3,6 +3,9 @@
 // show a list of existing movies -
 // watched or not should be indicated somehow
 // watch movies should show the date they were watched
+
+//const momentMin = require("./moment.min")
+
 // allow a user to mark a movie as having been watched (link, button ,icon, checkbox)
 const url = 'http://localhost:3000/movies'
 const listOfMovies = document.getElementById('listOfMovies')
@@ -30,7 +33,7 @@ movieSearch.addEventListener('submit', function(event){
         body: JSON.stringify({
             title: search, 
             //watched: boolean
-            //created_at: later add moment
+            created_at: moment().format("MMM Do YY"),
         })
     })
 })
@@ -38,7 +41,7 @@ movieSearch.addEventListener('submit', function(event){
 function renderMovieList(movieObj) {
     const movieEl = document.createElement('li')
     movieEl.id = movieObj.id
-    movieEl.innerHTML = `${movieObj.title}`
+    movieEl.innerHTML = `${movieObj.title} <br> ${movieObj.created_at}`
     listOfMovies.appendChild(movieEl)
 } 
 
