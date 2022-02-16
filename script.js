@@ -7,8 +7,8 @@
 const url = 'http://localhost:3000/movies'
 const listOfMovies = document.getElementById('listOfMovies')
 
-
-
+// fxn that will display movielist
+function listMovies() {
 fetch(url)
 .then((res) => res.json())
 .then((data) => {
@@ -17,7 +17,7 @@ for(let movieObj of data){
     renderMovieList(movieObj)
 }
 })
-
+}
 
 const movieSearch = document.getElementById('movie-search')
 movieSearch.addEventListener('submit', function(event){
@@ -38,10 +38,12 @@ movieSearch.addEventListener('submit', function(event){
 function renderMovieList(movieObj) {
     const movieEl = document.createElement('li')
     movieEl.id = movieObj.id
-    movieEl.innerHTML = `${movieObj.movie}`
+    movieEl.innerHTML = `${movieObj.title}`
     listOfMovies.appendChild(movieEl)
 } 
-// start display movie list
+
+listMovies();
+
 // add a checkBox to each movie
 //create a list element for movies
 //create some functions (boolean, moment.js, fetch request for patch to be able to update)
