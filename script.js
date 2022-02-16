@@ -5,12 +5,20 @@
 // watch movies should show the date they were watched
 // allow a user to mark a movie as having been watched (link, button ,icon, checkbox)
 const url = 'http://localhost:3000/movies'
+const listOfMovies = document.getElementById('listOfMovies')
+
+
 
 fetch(url)
 .then((res) => res.json())
 .then((data) => {
     console.log(data)
+for(let movieObj of data){
+    renderMovieList(movieObj)
+}
 })
+
+
 const movieSearch = document.getElementById('movie-search')
 movieSearch.addEventListener('submit', function(event){
     event.preventDefault()
@@ -26,6 +34,13 @@ movieSearch.addEventListener('submit', function(event){
         })
     })
 })
+
+function renderMovieList(movieObj) {
+    const movieEl = document.createElement('li')
+    movieEl.id = movieObj.id
+    movieEl.innerHTML = `${movieObj.movie}`
+    listOfMovies.appendChild(movieEl)
+} 
 // start display movie list
 // add a checkBox to each movie
 //create a list element for movies
